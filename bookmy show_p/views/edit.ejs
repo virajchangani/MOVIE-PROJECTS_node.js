@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/edit.css">
+</head>
+<body>
+    <form action="/updateData" method="post" enctype="multipart/form-data">
+        <h1>Movie Details Update</h1>
+        <input type="text" name="id" value="<%= data.id %>" hidden>
+        
+        <label>Movie Name:</label>
+        <input type="text" name="moviename" value="<%= data.moviename %>" placeholder="Enter Movie Name" required><br>
+        
+        <label>Release Date:</label>
+        <input type="date" name="releasedate" value="<%= data.releasedate %>"  placeholder="Release Date" required><br>
+        
+        <label>Rating:</label>
+        <input type="number" name="rating" step="0.1" value="<%= data.rating %>" placeholder="Enter Rating" required><br>
+        
+        <label>Genre:</label>
+        <input type="text" name="genre" value="<%= data.genre %>" placeholder="Enter Genre" required><br>
+        
+        <label>Language:</label>
+        <input type="text" name="language" value="<%= data.language %>" placeholder="Enter Movie Language" required><br>
+
+        <label>Time Duration:</label>
+        <input type="text" name="timeduration" value="<%= data.timeduration %>" placeholder="Enter Movie Duration (e.g., 2h 30m)" required><br>
+        
+        <label>Image:</label>
+        <input type="file" name="image"><br>
+        
+        
+        <img src="<%= data.image %>" style="width: 100px; height: auto;"><br>
+        
+        <button type="submit">Update Item</button>
+    </form>
+    
+</body>
+</html>

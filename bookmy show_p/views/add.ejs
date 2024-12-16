@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/add.css">
+</head>
+<body>
+    <form action="/addData" method="post" enctype="multipart/form-data">
+        <h1 style="text-align: center;">Add New Movie</h1>
+        <label>Movie Name :</label>
+        <input type="text" name="moviename" required placeholder="Enter Movie Name"><br>
+        
+        <label>Release Date :</label>
+        <input type="date" name="releasedate" required placeholder="Release Date"><br>
+        
+        <label>Rating :</label>
+        <input type="number" name="rating" step="0.1" required placeholder="Enter Rating"><br>
+        
+        <label>Genre :</label>
+        <input type="text" name="genre" required placeholder="Enter Genre"><br>
+        
+        <label>Language :</label>
+        <input type="text" name="language" required placeholder="Enter Movie Language"><br>
+
+        <label>time duration :</label>
+        <input type="text" name="timeduration" required placeholder="Enter Movie time duration (e.g., 2h 30m)"><br>
+
+        
+        <label>Image :</label>
+        <input type="file" name="image" required><br>
+        
+        <button type="submit">Add Item</button>
+    </form>
+
+</body>
+</html>
